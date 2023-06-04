@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <style>
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual País voce é ?</h1>
+    Digite seu País: <input type="text" id="text">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        
+        function verificar() {
+            var text = window.document.querySelector('input#text')
+            var res = window.document.querySelector('div#res')
+            var pais = (text.value)
+            res.innerHTML += `Seu País atual é ${pais}`
+            if (pais === 'Brasil') {
+                res.innerHTML += `<p>Voce é Brasileiro !</p>`
+            } else {
+                res.innerHTML += `<p>Voce é Estrangeiro !</p>`
+            }
+        
+        }
+    
+    </script>
+</body>
+</html>
+
+
+
+<!--
+>var pais = 'EUA'
+console.log(`Vivendo em ${pais}`)
+if (pais == 'Brasil') {
+    console.log(' Voce é Brasileiro')
+} else {
+    console.log(' Voce é Estrangeiro')
+}
+
+-->
